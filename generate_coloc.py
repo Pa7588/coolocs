@@ -166,6 +166,24 @@ button.on{background:var(--ink);color:#faf8f5}
 .np span,.miss{writing-mode:vertical-rl}
 .miss{position:absolute;left:0;right:0;top:8px;text-align:center;color:#c2b8ae;font-size:10px;font-style:italic}
 .foot{display:flex;justify-content:space-between;margin-top:12px;font-size:11px;color:var(--mut)}
+@media screen and (max-width:760px){
+ :root{--H:600px}
+ .wrap{padding:8px}
+ .sheet{border-radius:20px;padding:14px 0 12px 12px}
+ .head{flex-wrap:wrap;gap:2px 12px;padding-right:12px;margin-bottom:8px}
+ .head h1{font-size:26px}.head .wk{font-size:11px}
+ .bar{gap:6px;margin-bottom:8px}
+ #banner{font-size:11px;order:5;flex-basis:100%}
+ #banner.old .tip{white-space:normal;width:220px}
+ .grid{grid-template-columns:34px repeat(7,calc((100vw - 74px)/2.6));column-gap:8px;overflow-x:auto;
+  scroll-snap-type:x proximity;padding-right:12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+ .grid::-webkit-scrollbar{display:none}
+ .grid>.dh,.grid>.body{scroll-snap-align:start;scroll-margin-left:38px}
+ .grid>.sp0,.grid>.axis{position:sticky;left:0;z-index:6;background:var(--card)}
+ .chip{font-size:10.5px}
+ .notes{padding:0 12px 0 0}
+ .foot{padding-right:12px;flex-wrap:wrap;gap:4px}
+}
 @page{size:A4 landscape;margin:6mm}
 @media print{
  :root{--H:100mm}
@@ -277,7 +295,7 @@ function chips(dn){
 }
 function render(){
   document.getElementById('wk').textContent='Semaine du '+fr(ws)+' au '+fr(ws+6)+'/'+dstr(ws+6).slice(0,4);
-  let g='<div></div>';
+  let g='<div class="sp0"></div>';
   for(let i=0;i<7;i++){const dn=ws+i;
     g+=`<div class="dh ${dn===todayN?'today':''}"><b>${JOURS[dow(dn)].slice(0,3)}</b><span>${fr(dn)}</span><div class="ini">${PEOPLE.map(p=>`<i class="${p.c}">${p.k[0]}</i>`).join('')}</div>${chips(dn)}</div>`}
   g+='<div class="axis">';
@@ -290,7 +308,8 @@ function render(){
     g+=PEOPLE.map(p=>col(p,dn)).join('');
     g+='</div>';
   }
-  document.getElementById('grid').innerHTML=g;
+  const gr=document.getElementById('grid');gr.innerHTML=g;
+  if(window.innerWidth<=760){const t=ws<=todayN&&todayN<ws+7?todayN-ws:0;const el=gr.querySelectorAll('.body')[t];gr.scrollLeft=el?el.offsetLeft-38:0}
 }
 prev.onclick=()=>{ws-=7;render()};next.onclick=()=>{ws+=7;render()};today.onclick=()=>{ws=mondayOf(todayN);render()};
 document.querySelectorAll('#modes button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;
