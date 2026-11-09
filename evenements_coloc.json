@@ -1,0 +1,254 @@
+{
+ "_lisez_moi": "Fichier à compléter à la main. 'evenements' = séminaires, formations, échéances (qui = liste de prénoms). 'vacances' = périodes par personne. Sources : PDF calendrier enseignement DESMU P9 2A, Calendrier ETT, mails de Pascale G., feuille « Planning indispo/vacances ped » (colonne V). 'bloque': false = n'empêche pas le 🎉 'tous dispos' (ex. une échéance).",
+ "evenements": [
+  {
+   "date": "2026-11-11",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "⏰",
+   "label": "Envoyer groupes thèse + 3 diapos (M. Hébrard)",
+   "bloque": false
+  },
+  {
+   "date": "2026-11-16",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "📚",
+   "label": "Séminaire Recherche + Traumato péd. (½ j)",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2026-11-16",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🎓",
+   "label": "Réunion thèse (16 ou 17 selon groupe)",
+   "heure": "18h00",
+   "lieu": "Salle 426 URM",
+   "incertain": true
+  },
+  {
+   "date": "2026-11-17",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🎓",
+   "label": "Réunion thèse (16 ou 17 selon groupe)",
+   "heure": "18h00",
+   "lieu": "Salle 426 URM",
+   "incertain": true
+  },
+  {
+   "date": "2026-11-20",
+   "qui": [
+    "Jeanne"
+   ],
+   "emoji": "🫀",
+   "label": "Labo écho (ETT)",
+   "lieu": "Rangueil"
+  },
+  {
+   "date": "2026-11-25",
+   "qui": [
+    "Jeanne"
+   ],
+   "emoji": "🩺",
+   "label": "Simulation gestes péd.",
+   "heure": "8h30–13h",
+   "lieu": "ITSIMS Purpan"
+  },
+  {
+   "date": "2026-11-25",
+   "qui": [
+    "Théo",
+    "Pierre"
+   ],
+   "emoji": "🩺",
+   "label": "Simulation gestes péd.",
+   "heure": "13h30–17h",
+   "lieu": "ITSIMS Purpan",
+   "incertain": true
+  },
+  {
+   "date": "2026-11-27",
+   "qui": [
+    "Pierre"
+   ],
+   "emoji": "🫀",
+   "label": "Labo écho (ETT)",
+   "lieu": "Rangueil"
+  },
+  {
+   "date": "2026-12-10",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🧠",
+   "label": "Séminaire Neurologie",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2026-12-11",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🧠",
+   "label": "Séminaire Neurologie",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2027-01-14",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🍽️",
+   "label": "Séminaire Uro-Digestif",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2027-01-15",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🍽️",
+   "label": "Séminaire Uro-Digestif",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2027-04-22",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "👶",
+   "label": "Séminaire Pédiatrie Occitanie",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2027-04-23",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "👶",
+   "label": "Séminaire Pédiatrie Occitanie",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2027-06-04",
+   "qui": [
+    "Théo"
+   ],
+   "emoji": "🫀",
+   "label": "Labo écho (ETT)",
+   "lieu": "Rangueil"
+  },
+  {
+   "date": "2027-09-16",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🧪",
+   "label": "Séminaire Métabo/Infectieux/Néphro",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2027-09-17",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🧪",
+   "label": "Séminaire Métabo/Infectieux/Néphro",
+   "lieu": "CEC"
+  },
+  {
+   "date": "2027-10-13",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🫀",
+   "label": "Séminaire Écho niveau 2 + réu thèse (12-13/10)",
+   "lieu": "ITSIMS"
+  },
+  {
+   "date": "2027-10-14",
+   "qui": [
+    "Théo",
+    "Jeanne",
+    "Pierre"
+   ],
+   "emoji": "🫁",
+   "label": "Séminaire Respiratoire",
+   "lieu": "CEC"
+  }
+ ],
+ "vacances": [
+  {
+   "qui": "Théo",
+   "du": "2026-11-30",
+   "au": "2026-12-02"
+  },
+  {
+   "qui": "Théo",
+   "du": "2026-12-04",
+   "au": "2026-12-06"
+  },
+  {
+   "qui": "Théo",
+   "du": "2027-02-15",
+   "au": "2027-02-21"
+  },
+  {
+   "qui": "Jeanne",
+   "du": "2026-12-30",
+   "au": "2027-01-06"
+  },
+  {
+   "qui": "Jeanne",
+   "du": "2027-01-08",
+   "au": "2027-01-10"
+  },
+  {
+   "qui": "Pierre",
+   "du": "2026-12-28",
+   "au": "2027-01-03"
+  },
+  {
+   "qui": "Pierre",
+   "du": "2027-01-17",
+   "au": "2027-01-17"
+  },
+  {
+   "qui": "Pierre",
+   "du": "2027-01-20",
+   "au": "2027-01-24"
+  }
+ ]
+}

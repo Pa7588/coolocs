@@ -1,0 +1,356 @@
+{
+ "source": "2026-11-09T18:48:48+01:00",
+ "from": "2026-11-02",
+ "to": "2026-11-28",
+ "people": [
+  "Jeanne",
+  "Pierre",
+  "Théo"
+ ],
+ "records": [
+  {
+   "date": "2026-11-02",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30",
+   "start": "08:30",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-02",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h MED",
+   "start": "13:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-02",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde 18h-8h",
+   "start": "18:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-03",
+   "dur": 480,
+   "end": "00:00",
+   "poste": "Internes 16h-00h",
+   "start": "16:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-04",
+   "dur": 480,
+   "end": "00:00",
+   "poste": "Internes 16h-00h",
+   "start": "16:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-06",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30",
+   "start": "08:30",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-06",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h CHIR",
+   "start": "13:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-08",
+   "dur": 540,
+   "end": "18:00",
+   "poste": "Internes WE 9h-18h CHIR",
+   "start": "09:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-08",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde UA",
+   "start": "18:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-08",
+   "dur": 360,
+   "end": "00:00",
+   "poste": "Internes WE 18h-minuit CHIR",
+   "start": "18:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-09",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30 CHIR",
+   "start": "08:30",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-09",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde UA",
+   "start": "18:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-10",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h MED",
+   "start": "13:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-10",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde UA",
+   "start": "18:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-12",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30",
+   "start": "08:30",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-12",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30",
+   "start": "08:30",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-12",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h CHIR",
+   "start": "13:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-14",
+   "dur": 270,
+   "end": "13:00",
+   "poste": "Internes Samedi 8h30-13h",
+   "start": "08:30",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-14",
+   "dur": 540,
+   "end": "18:00",
+   "poste": "Internes WE 9h-18h CHIR",
+   "start": "09:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-14",
+   "dur": 1200,
+   "end": "09:00",
+   "poste": "Internes Garde chir 13h-9h",
+   "start": "13:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-14",
+   "dur": 360,
+   "end": "00:00",
+   "poste": "Internes WE 18h-minuit CHIR",
+   "start": "18:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-16",
+   "dur": 480,
+   "end": "00:00",
+   "poste": "Internes 16h-00h",
+   "start": "16:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-17",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h CHIR",
+   "start": "13:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-17",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde 18h-8h",
+   "start": "18:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-18",
+   "dur": 480,
+   "end": "00:00",
+   "poste": "Internes 16h-00h",
+   "start": "16:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-19",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h MED",
+   "start": "13:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-19",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde 18h-8h",
+   "start": "18:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-20",
+   "dur": 480,
+   "end": "00:00",
+   "poste": "Internes 16h-00h",
+   "start": "16:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-21",
+   "dur": 540,
+   "end": "18:00",
+   "poste": "Int sam 8h30/dim 9h-18h MED",
+   "start": "09:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-21",
+   "dur": 1200,
+   "end": "09:00",
+   "poste": "Internes Garde chir 13h-9h",
+   "start": "13:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-21",
+   "dur": 360,
+   "end": "00:00",
+   "poste": "Interne WE 18h-00 MED",
+   "start": "18:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-23",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30",
+   "start": "08:30",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-23",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30 CHIR",
+   "start": "08:30",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-23",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde UA",
+   "start": "18:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-24",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h CHIR",
+   "start": "13:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-24",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h MED",
+   "start": "13:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-25",
+   "dur": 480,
+   "end": "21:00",
+   "poste": "Internes 13h-21h CHIR",
+   "start": "13:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-25",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde UA",
+   "start": "18:00",
+   "who": "Pierre"
+  },
+  {
+   "date": "2026-11-26",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30 CHIR",
+   "start": "08:30",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-26",
+   "dur": 840,
+   "end": "08:00",
+   "poste": "Internes Garde 18h-8h",
+   "start": "18:00",
+   "who": "Théo"
+  },
+  {
+   "date": "2026-11-27",
+   "dur": 600,
+   "end": "18:30",
+   "poste": "Internes 8h30-18h30",
+   "start": "08:30",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-28",
+   "dur": 540,
+   "end": "18:00",
+   "poste": "Internes WE 9h-18h CHIR",
+   "start": "09:00",
+   "who": "Jeanne"
+  },
+  {
+   "date": "2026-11-28",
+   "dur": 360,
+   "end": "00:00",
+   "poste": "Internes WE 18h-minuit CHIR",
+   "start": "18:00",
+   "who": "Jeanne"
+  }
+ ]
+}
