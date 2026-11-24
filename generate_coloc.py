@@ -340,4 +340,47 @@ function chips(dn){
   return '<div class="chips">'+(evs[dn]||[]).map(x=>{
     const all=x.qui.length===3, who=all?'':' ('+x.qui.map(q=>q[0]).join('')+')';
     const t=`${x.emoji} ${x.heure?x.heure+' ':''}${x.label}${who}${x.incertain?' ?':''}`;
-    return `<div class="chip" title="${x.label}${x.lieu?' — '+x.
+    return `<div class="chip" title="${x.label}${x.lieu?' — '+x.lieu:''}${x.heure?' — '+x.heure:''}${x.incertain?' (à vérifier)':''}">${t}</div>`}).join('')+'</div>';
+}
+function render(){
+  document.getElementById('wk').textContent='Semaine du '+fr(ws)+' au '+fr(ws+6)+'/'+dstr(ws+6).slice(0,4);
+  let g='<div class="sp0"></div>';
+  for(let i=0;i<7;i++){const dn=ws+i;
+    g+=`<div class="dh ${dn===todayN?'today':''}${dow(dn)%6===0?' we':''}"><b>${JOURS[dow(dn)].slice(0,3)}</b><span>${fr(dn)}</span><div class="ini">${PEOPLE.map(p=>`<i class="${p.c}">${p.k[0]}</i>`).join('')}</div>${chips(dn)}</div>`}
+  g+='<div class="axis">';
+  for(let i=0;i<=24;i++)g+=`<i class="${[8,12,18].includes(i)?'k':''}" style="top:calc(6px + (100% - 12px) * ${i/24})">${i}h</i>`;
+  g+='</div>';
+  for(let i=0;i<7;i++){
+    const dn=ws+i; g+='<div class="body">';
+    if(dn>toN)g+='<div class="np"><span>planning pas encore publié</span></div>';
+    else if(mode!=='none'&&!(D.people&&D.people.length<3))together(dn,mode==='eve').forEach(([a,b])=>g+=`<div class="com" style="top:${L(a)};height:${W(a,b)}">🎉</div>`);
+    g+=PEOPLE.map(p=>col(p,dn)).join('');
+    g+='</div>';
+  }
+  const gr=document.getElementById('grid');gr.innerHTML=g;
+  if(window.innerWidth<=760){const t=ws<=todayN&&todayN<ws+7?todayN-ws:0;const el=gr.querySelectorAll('.body')[t];gr.scrollLeft=el?el.offsetLeft-38:0}
+}
+prev.onclick=()=>{ws-=7;render()};next.onclick=()=>{ws+=7;render()};today.onclick=()=>{ws=mondayOf(todayN);render()};
+document.querySelectorAll('#modes button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;
+  document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x===b));render()});
+(function(){
+  const src=new Date(D.source),days=Math.floor((Date.now()-src)/864e5);
+  const f=src.toLocaleString('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'});
+  document.getElementById('sync').textContent='synchro '+f;
+  const el=document.getElementById('banner');
+  if(days>=THRESH){el.className='old';
+    el.innerHTML=`⚠️ Données figées depuis ${days} jours (synchro : ${f}). Merci d'harceler Pierre pour une mise à jour.<span class="tip">📍 1 avenue de l'ancien vélodrome, Toulouse</span>`}
+  else el.textContent='🔄 Synchro iCal : '+f;
+})();
+function printBW(){
+  const st=document.createElement('style');st.textContent='@page{size:A4 portrait;margin:0}';document.head.appendChild(st);
+  document.documentElement.classList.add('bw');
+  const done=()=>{st.remove();document.documentElement.classList.remove('bw');window.removeEventListener('afterprint',done)};
+  window.addEventListener('afterprint',done);window.print();
+}
+render();
+</script></body></html>
+"""
+
+if __name__ == "__main__":
+    main()
