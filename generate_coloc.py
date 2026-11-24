@@ -200,40 +200,50 @@ button.on{background:var(--ink);color:#faf8f5}
 /* ===== mode noir & blanc compact (entre A6 et A5), centré sur A4 portrait ===== */
 @media print{
 html.bw{--H:66mm;
- --Tb:#6f6f6f;
- --Jb:#d2d2d2;
+ --Tb:#1f1f1f;
+ --Jb:#b4b4b4;
  --Pb:#fff}
 html.bw body{background:#fff}
-html.bw .wrap{padding-top:78mm}
+html.bw .wrap{padding-top:96mm}
 html.bw .sheet{width:182mm;margin:0 auto;padding:0;border:.5mm solid #000;border-radius:3mm;padding:2.5mm 2.5mm 2mm;color:#000}
-html.bw .head{margin-bottom:1mm;gap:3mm}
+html.bw .head{margin-bottom:1.5mm;gap:3mm;justify-content:center;align-items:baseline}
 html.bw .head h1{font-size:15px;color:#000}
-html.bw .head .wk{font-size:6.5px;color:#000;letter-spacing:.1em}
+html.bw .head .wk{font-size:7px;color:#000;letter-spacing:.1em}
 html.bw .grid{grid-template-columns:7mm repeat(7,1fr);column-gap:1.2mm}
-html.bw .dh b{font-size:6.5px;color:#000}
-html.bw .dh span{font-size:6px;color:#000}
+html.bw .dh b{font-size:7.5px;color:#000}
+html.bw .dh span{font-size:6.5px;color:#000;font-weight:500}
 html.bw .dh.today b{color:#000;text-decoration:underline}
 html.bw .ini{margin-top:1mm}
-html.bw .ini i{font-size:6px;color:#000;border:.25mm solid #000;border-radius:1mm;margin:0 .3mm;padding:0 0 .2mm;text-align:center}
+html.bw .ini i{font-size:6.8px;font-weight:700;color:#000;border:.25mm solid #000;border-radius:1mm;margin:0 .3mm;padding:0 0 .2mm;text-align:center}
 html.bw .ini .T{background:var(--Tb)}html.bw .ini .J{background:var(--Jb)}html.bw .ini .P{background:#fff}
 html.bw .ini .T{color:#fff}
-html.bw .chip{font-size:5.2px;line-height:1.15;padding:.3mm 1mm;background:#fff;color:#000;border:.2mm solid #000;border-radius:1mm}
+html.bw .chip{font-size:6px;font-weight:500;line-height:1.15;padding:.3mm 1mm;background:#fff;color:#000;border:.2mm solid #000;border-radius:1mm}
 html.bw .chips{gap:.5mm;margin-top:1mm}
-html.bw .axis i{font-size:5px;color:#000}html.bw .axis i.k{font-size:7px;color:#000}
+html.bw .axis i{font-size:5.8px;color:#000}html.bw .axis i.k{font-size:8px;font-weight:700;color:#000}
 html.bw .body{background:#fff;border:.3mm solid #000;border-radius:2mm;padding:.8mm .4mm;gap:.4mm}
 html.bw .col+.col{border-left:.15mm dashed #555}
-html.bw .b{border:.25mm solid #000;border-radius:1.2mm;color:#000;font-size:5px;padding:.6mm 0}
+html.bw .b{border:.4mm solid #000;border-radius:1.2mm;color:#000;font-size:5.8px;font-weight:600;padding:.6mm 0}
 html.bw .T .b,html.bw .J .b,html.bw .P .b{background:var(--Pb);color:#000}
 html.bw .T .b{background:var(--Tb)}html.bw .J .b{background:var(--Jb)}html.bw .T .b{color:#fff}
-html.bw .b .lab{font-size:5.2px;font-weight:600;color:#000;background:#fff;padding:.6mm 0;border-radius:.8mm}
-html.bw .ch{background:radial-gradient(circle,#555 0 .2mm,transparent .25mm) 0 0/1.3mm 1.3mm,#fff;border:.2mm dotted #000;font-size:8px}
-html.bw .com{background:repeating-linear-gradient(135deg,#000 0 .25mm,#fff .25mm 2mm);border:.3mm solid #000;font-size:9px}
-html.bw .ad,html.bw .T .ad.vac,html.bw .J .ad.vac,html.bw .P .ad.vac{background:repeating-linear-gradient(0deg,#000 0 .25mm,#fff .25mm 1.5mm);color:#000;border:.2mm solid #000;font-size:5.5px}
-html.bw .ad span,html.bw .ad.vac span{background:#fff;padding:.8mm .2mm;border-radius:.8mm;font-weight:600;color:#000}
+html.bw .b .lab{font-size:6.4px;font-weight:700;color:inherit;background:none;padding:0}
+html.bw .b{justify-content:space-between;text-align:center}
+html.bw .ch{background:radial-gradient(circle,#999 0 .17mm,transparent .22mm) 0 0/1.4mm 1.4mm,#fff;border:.15mm dotted #888;font-size:8px}
+html.bw .com{background:#f5f5f5;border:.15mm dotted #aaa;font-size:7px;opacity:.85}
+html.bw .ad,html.bw .T .ad.vac,html.bw .J .ad.vac,html.bw .P .ad.vac{background:#ececec;color:#000;border:.3mm dashed #000;font-size:5.5px}
+html.bw .ad span,html.bw .ad.vac span{background:#fff;padding:1mm .3mm;border-radius:1mm;font-weight:600;color:#000;border:.2mm solid #000}
 html.bw .np{color:#555}
+html.bw .em{display:none}
+html.bw .we b{background:#000;color:#fff;border-radius:1mm;padding:.2mm 1.6mm;display:inline-block}
+html.bw .dh.today b{background:none;color:#000;text-decoration:underline;text-underline-offset:.5mm;text-decoration-thickness:.3mm}
+html.bw .body::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+ background:
+  linear-gradient(#bbb,#bbb) 0 calc(.8mm + (100% - 1.6mm) * .3333)/100% .12mm no-repeat,
+  linear-gradient(#bbb,#bbb) 0 calc(.8mm + (100% - 1.6mm) * .5)/100% .12mm no-repeat,
+  linear-gradient(#bbb,#bbb) 0 calc(.8mm + (100% - 1.6mm) * .75)/100% .12mm no-repeat}
+html.bw .col{z-index:1}
 html.bw .notes{margin-top:1.2mm}html.bw .notes b{font-size:8px;color:#000}html.bw .notes i{height:4.2mm;border-bottom:.2mm solid #000}
 html.bw .notes i:nth-of-type(3){display:none}
-html.bw .foot{font-size:5.5px;color:#000;margin-top:1mm}
+html.bw .foot{font-size:6.2px;color:#000;margin-top:1mm}
 }
 </style></head><body><div class="wrap">
 <div class="bar noprint">
@@ -322,7 +332,7 @@ function col(p,dn){
     const nx=wl[i+1], clip=nx&&nx.a<x.b, db=clip?nx.a:x.b;
     const cls=(x.cont?' cs':'')+(x.more?' ce':'');
     const e0=x.cont?'':emo(x.label,x.a);
-    const lab=(db-x.a>=120)?`<span class="lab">${e0}${x.label?' '+x.label:''}</span>`:'<span></span>';
+    const lab=(db-x.a>=120)?`<span class="lab">${x.label?(e0?`<i class="em">${e0}</i> `:'')+x.label:e0}</span>`:'<span></span>';
     h+=`<div class="b${cls}" title="${p.k} — ${x.label} (${x.txt})" style="top:calc(${L(x.a)} + 1px);height:calc(${W(x.a,db)} - 2px)"><span>${x.cont?'↳':hm(x.a)}</span>${lab}<span>${clip?'':x.more?'↴':hm(x.b)}</span></div>`});
   return h+'</div>';
 }
@@ -330,47 +340,4 @@ function chips(dn){
   return '<div class="chips">'+(evs[dn]||[]).map(x=>{
     const all=x.qui.length===3, who=all?'':' ('+x.qui.map(q=>q[0]).join('')+')';
     const t=`${x.emoji} ${x.heure?x.heure+' ':''}${x.label}${who}${x.incertain?' ?':''}`;
-    return `<div class="chip" title="${x.label}${x.lieu?' — '+x.lieu:''}${x.heure?' — '+x.heure:''}${x.incertain?' (à vérifier)':''}">${t}</div>`}).join('')+'</div>';
-}
-function render(){
-  document.getElementById('wk').textContent='Semaine du '+fr(ws)+' au '+fr(ws+6)+'/'+dstr(ws+6).slice(0,4);
-  let g='<div class="sp0"></div>';
-  for(let i=0;i<7;i++){const dn=ws+i;
-    g+=`<div class="dh ${dn===todayN?'today':''}"><b>${JOURS[dow(dn)].slice(0,3)}</b><span>${fr(dn)}</span><div class="ini">${PEOPLE.map(p=>`<i class="${p.c}">${p.k[0]}</i>`).join('')}</div>${chips(dn)}</div>`}
-  g+='<div class="axis">';
-  for(let i=0;i<=24;i++)g+=`<i class="${[8,12,18].includes(i)?'k':''}" style="top:calc(6px + (100% - 12px) * ${i/24})">${i}h</i>`;
-  g+='</div>';
-  for(let i=0;i<7;i++){
-    const dn=ws+i; g+='<div class="body">';
-    if(dn>toN)g+='<div class="np"><span>planning pas encore publié</span></div>';
-    else if(mode!=='none'&&!(D.people&&D.people.length<3))together(dn,mode==='eve').forEach(([a,b])=>g+=`<div class="com" style="top:${L(a)};height:${W(a,b)}">🎉</div>`);
-    g+=PEOPLE.map(p=>col(p,dn)).join('');
-    g+='</div>';
-  }
-  const gr=document.getElementById('grid');gr.innerHTML=g;
-  if(window.innerWidth<=760){const t=ws<=todayN&&todayN<ws+7?todayN-ws:0;const el=gr.querySelectorAll('.body')[t];gr.scrollLeft=el?el.offsetLeft-38:0}
-}
-prev.onclick=()=>{ws-=7;render()};next.onclick=()=>{ws+=7;render()};today.onclick=()=>{ws=mondayOf(todayN);render()};
-document.querySelectorAll('#modes button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;
-  document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x===b));render()});
-(function(){
-  const src=new Date(D.source),days=Math.floor((Date.now()-src)/864e5);
-  const f=src.toLocaleString('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Paris'});
-  document.getElementById('sync').textContent='synchro '+f;
-  const el=document.getElementById('banner');
-  if(days>=THRESH){el.className='old';
-    el.innerHTML=`⚠️ Données figées depuis ${days} jours (synchro : ${f}). Merci d'harceler Pierre pour une mise à jour.<span class="tip">📍 1 avenue de l'ancien vélodrome, Toulouse</span>`}
-  else el.textContent='🔄 Synchro iCal : '+f;
-})();
-function printBW(){
-  const st=document.createElement('style');st.textContent='@page{size:A4 portrait;margin:0}';document.head.appendChild(st);
-  document.documentElement.classList.add('bw');
-  const done=()=>{st.remove();document.documentElement.classList.remove('bw');window.removeEventListener('afterprint',done)};
-  window.addEventListener('afterprint',done);window.print();
-}
-render();
-</script></body></html>
-"""
-
-if __name__ == "__main__":
-    main()
+    return `<div class="chip" title="${x.label}${x.lieu?' — '+x.
