@@ -197,12 +197,51 @@ button.on{background:var(--ink);color:#faf8f5}
  .b{font-size:8.5px}.b .lab{font-size:8.5px}.com{font-size:15px}
  .grid{grid-template-columns:24px repeat(7,1fr);column-gap:5px}
 }
+/* ===== mode noir & blanc compact (entre A6 et A5), centré sur A4 portrait ===== */
+@media print{
+html.bw{--H:66mm;
+ --Tb:#6f6f6f;
+ --Jb:#d2d2d2;
+ --Pb:#fff}
+html.bw body{background:#fff}
+html.bw .wrap{padding-top:78mm}
+html.bw .sheet{width:182mm;margin:0 auto;padding:0;border:.5mm solid #000;border-radius:3mm;padding:2.5mm 2.5mm 2mm;color:#000}
+html.bw .head{margin-bottom:1mm;gap:3mm}
+html.bw .head h1{font-size:15px;color:#000}
+html.bw .head .wk{font-size:6.5px;color:#000;letter-spacing:.1em}
+html.bw .grid{grid-template-columns:7mm repeat(7,1fr);column-gap:1.2mm}
+html.bw .dh b{font-size:6.5px;color:#000}
+html.bw .dh span{font-size:6px;color:#000}
+html.bw .dh.today b{color:#000;text-decoration:underline}
+html.bw .ini{margin-top:1mm}
+html.bw .ini i{font-size:6px;color:#000;border:.25mm solid #000;border-radius:1mm;margin:0 .3mm;padding:0 0 .2mm;text-align:center}
+html.bw .ini .T{background:var(--Tb)}html.bw .ini .J{background:var(--Jb)}html.bw .ini .P{background:#fff}
+html.bw .ini .T{color:#fff}
+html.bw .chip{font-size:5.2px;line-height:1.15;padding:.3mm 1mm;background:#fff;color:#000;border:.2mm solid #000;border-radius:1mm}
+html.bw .chips{gap:.5mm;margin-top:1mm}
+html.bw .axis i{font-size:5px;color:#000}html.bw .axis i.k{font-size:7px;color:#000}
+html.bw .body{background:#fff;border:.3mm solid #000;border-radius:2mm;padding:.8mm .4mm;gap:.4mm}
+html.bw .col+.col{border-left:.15mm dashed #555}
+html.bw .b{border:.25mm solid #000;border-radius:1.2mm;color:#000;font-size:5px;padding:.6mm 0}
+html.bw .T .b,html.bw .J .b,html.bw .P .b{background:var(--Pb);color:#000}
+html.bw .T .b{background:var(--Tb)}html.bw .J .b{background:var(--Jb)}html.bw .T .b{color:#fff}
+html.bw .b .lab{font-size:5.2px;font-weight:600;color:#000;background:#fff;padding:.6mm 0;border-radius:.8mm}
+html.bw .ch{background:radial-gradient(circle,#555 0 .2mm,transparent .25mm) 0 0/1.3mm 1.3mm,#fff;border:.2mm dotted #000;font-size:8px}
+html.bw .com{background:repeating-linear-gradient(135deg,#000 0 .25mm,#fff .25mm 2mm);border:.3mm solid #000;font-size:9px}
+html.bw .ad,html.bw .T .ad.vac,html.bw .J .ad.vac,html.bw .P .ad.vac{background:repeating-linear-gradient(0deg,#000 0 .25mm,#fff .25mm 1.5mm);color:#000;border:.2mm solid #000;font-size:5.5px}
+html.bw .ad span,html.bw .ad.vac span{background:#fff;padding:.8mm .2mm;border-radius:.8mm;font-weight:600;color:#000}
+html.bw .np{color:#555}
+html.bw .notes{margin-top:1.2mm}html.bw .notes b{font-size:8px;color:#000}html.bw .notes i{height:4.2mm;border-bottom:.2mm solid #000}
+html.bw .notes i:nth-of-type(3){display:none}
+html.bw .foot{font-size:5.5px;color:#000;margin-top:1mm}
+}
 </style></head><body><div class="wrap">
 <div class="bar noprint">
  <button id="prev">◀</button><button id="today">aujourd'hui</button><button id="next">▶</button>
  <span class="sp"></span><div id="banner"></div>
  
  <button onclick="window.print()">🖨️ Imprimer / PDF</button>
+ <button onclick="printBW()" title="Petit format noir et blanc, centré sur une page A4">◩ Imprimer N&amp;B compact</button>
 </div>
 <div class="sheet">
  <div class="head"><h1>coolocs ✨</h1><span class="wk" id="wk"></span></div>
@@ -323,6 +362,12 @@ document.querySelectorAll('#modes button').forEach(b=>b.onclick=()=>{mode=b.data
     el.innerHTML=`⚠️ Données figées depuis ${days} jours (synchro : ${f}). Merci d'harceler Pierre pour une mise à jour.<span class="tip">📍 1 avenue de l'ancien vélodrome, Toulouse</span>`}
   else el.textContent='🔄 Synchro iCal : '+f;
 })();
+function printBW(){
+  const st=document.createElement('style');st.textContent='@page{size:A4 portrait;margin:0}';document.head.appendChild(st);
+  document.documentElement.classList.add('bw');
+  const done=()=>{st.remove();document.documentElement.classList.remove('bw');window.removeEventListener('afterprint',done)};
+  window.addEventListener('afterprint',done);window.print();
+}
 render();
 </script></body></html>
 """
